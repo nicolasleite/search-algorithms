@@ -1,5 +1,6 @@
 from readGrid import readGrid 
 from breadthFirst import breadthFirst
+from depthFirst import depthFirst
 import sys
 
 def main():
@@ -10,8 +11,10 @@ def main():
 	start = inp[1]
 	finish = inp[2]
 
-	# dfs = depthFirst ()
-	bfs = breadthFirst (filename, grid, start)
+	# print ("Running Depth-First Search...")
+	# dfs = depthFirst (filename, grid, start)
+	# print ("Running Breadth-First Search...")
+	# bfs = breadthFirst (filename, grid, start)
 	
 
 	# analizeResults ([dfs, bfs])
