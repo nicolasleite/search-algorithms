@@ -11,8 +11,8 @@ def main():
 	start = inp[1]
 	finish = inp[2]
 
-	# print ("Running Depth-First Search...")
-	# dfs = depthFirst (filename, grid, start)
+	print ("Running Depth-First Search...")
+	dfs = depthFirst (filename, grid, start)
 	# print ("Running Breadth-First Search...")
 	# bfs = breadthFirst (filename, grid, start)
 	
