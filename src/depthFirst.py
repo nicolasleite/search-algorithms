@@ -39,4 +39,5 @@ def depthFirst (inputFile, grid, start):
 	with open(filename, 'a') as f:
 		f.write(str(iteractions) + '\n')
 		f.write(str(curPath))
+	print ("DFS finished successfully")
 	return True
