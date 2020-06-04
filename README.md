@@ -5,12 +5,17 @@
 
 ## Execution
 ```
-  python3 src/main.py <input-file>
+  python3 src/main.py <input-file-0> <input-file-1> ... 
 ```
 
 ## Example
+  Running mannually:
 ```
-  python3 src/main.py example/input
+  python3 src/main.py example/input0.in example/input1.in
+```
+  Automated running (all .in files in examples folder)
+```
+  ./run.sh
 ```
 
 ## Developers
