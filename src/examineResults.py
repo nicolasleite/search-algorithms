@@ -16,7 +16,37 @@ for filename in allFiles:
 		lenght = int (lines[1])
 		resList.append([filename.split('examples/')[1], iteractions, lenght])
 
-results=PrettyTable(['File', 'Iteractions', 'Lenght'])
+mediumIt=[0,0]
+mediumLen=[0,0]
+resultsTable=PrettyTable()
+resultsTable.title='Obtained results'
+resultsTable.field_names=['File', 'Iteractions', 'Lenght']
 for item in resList:
-	results.add_row(item)
-print (results)
+	if re.search('(breadth.*)', item[0]):
+		mediumIt[0] += item[1]
+		mediumLen[0] += item[2]
+	elif re.search('(depth.*)', item[0]):
+		mediumIt[1] += item[1]
+		mediumLen[1] += item[2]
+	
+	resultsTable.add_row(item)
+
+for i in range(0, 2):
+	mediumIt[i] = mediumIt[i]/len(resList)/2
+	mediumLen[i] = mediumLen[i]/len(resList)/2
+
+
+mediumTable=PrettyTable()
+mediumTable.title='Medium of Results'
+mediumTable.field_names=['Algorithm', 'Iteractions', 'Lenghts']
+mediumTable.add_row(['Breadth First Search', mediumIt[0], mediumLen[0]])
+mediumTable.add_row(['Depth First Search', mediumIt[1], mediumLen[1]])
+
+print()
+print('########################################')
+print('########## Summary of results ##########')
+print('########################################')
+print()
+
+print (resultsTable)
+print (mediumTable)
