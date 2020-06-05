@@ -22,7 +22,7 @@ def breadthFirst(inputFile, grid, start):
 		if grid[x][y] == '$':
 			with open(filename, 'a') as f:
 				f.write(str(iteractions) + '\n')
-				f.write(str(path))
+				f.write(str(len(path)))
 			print ("BFS finished successfully")
 			return True
 
